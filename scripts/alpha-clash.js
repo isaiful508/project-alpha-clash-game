@@ -8,8 +8,24 @@
 
 // // show the playground
 // }
+function continueGame(){
+    // step 1:generate a random alphabet
+    const alphabet = getARandomAlphabet();
+    console.log('ur random alphabet:',alphabet);
+
+    // se randomly generated alphabet ti=o the screen(show it)
+    const currentAlphabetElement = document.getElementById('current-alphabet');
+    currentAlphabetElement.innerText = alphabet;
+
+    // set background color
+    setBackgroundColorById(alphabet);
+    
+
+
+}
 
 function play(){
     hideElementById('home-screen');
     showElementById('play-ground');
+    continueGame();
 }
